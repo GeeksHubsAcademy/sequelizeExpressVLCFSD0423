@@ -5,9 +5,12 @@ const app = express();
 
 const PORT = 5000;
 
+const router = require('./router');
+
 const db = require('./db');
 
 app.use(express.json());
+app.use(router);
 
 db.then(
     ()=>{
